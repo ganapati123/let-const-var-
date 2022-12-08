@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function scope</title>
+</head>
+<body>
+    <script>
+    
+        function myfun(){
+            const x =30    //here also any keyword you can use inside function scope and variable access inside function only
+            console.log(x) //30
+        }
+        myfun()
+      
+        console.log(x) //Uncaught ReferenceError: x is not defined
+    </script>
+</body>
+</html>

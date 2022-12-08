@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block scope</title>
+</head>
+<body>
+    <script>
+        // const x =20
+        // {
+        //     let x =10     //only use let,const keywords inside block scope,  var keyword is not use inside block scope
+        //     console.log(x) //crbug/1173575, non-JS module files deprecated.
+        // }
+
+
+        // {
+        //     let x =10
+        //     console.log(x)
+        // }
+        // console.log(x)   // Uncaught ReferenceError: x is not defined
+
+
+        {
+            const x =11
+            console.log(x)
+        }
+        console.log(x)  //Uncaught ReferenceError: x is not defined
+
+        // {
+        //  var x =11       //if you use var keyword inside block scope then outside of function also it can access
+        //  console.log(x)   //11
+        //  }
+        // console.log(x)   //11
+    </script>
+</body>
+</html>
